@@ -1,1 +1,14 @@
 <h1>List <%= @list.name %></h1>
+
+<% @list.bookmarks.each do |bookmark| %>
+  <div class="bookmark-container">
+    <h2><%= bookmark.comment %></h2>
+    <h3><%= bookmark.movie.title %></h3>
+    <div class="movie-image">image</div>
+  </div>
+<% end %>
+<%# <%= link_to "modifier ma liste", edit_list_path %>
+<%= link_to "supprimer",
+  list_path(@list),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>

@@ -2,5 +2,5 @@
 
 
 <% @lists.each do |list| %>
-<div class="list"><%= list %></div>
+<div class="list"><%= link_to list.name, list_path(list) %></div>
 <% end %>

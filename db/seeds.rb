@@ -14,3 +14,5 @@ Movie.create(title: "Titanic", overview: "101-year-old Rose DeWitt Bukater tells
 Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century.", poster_url: "https://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg", rating: 7.0)
 
 List.create(name: "test")
+
+Bookmark.create(comment: "derniere liste et film", movie_id: Movie.last[:id], list_id: List.last[:id])
