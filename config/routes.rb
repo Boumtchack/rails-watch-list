@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   root to: "pages#home"
   resources :lists, only: %i[index show create new] do
-    resources :bookmarks, only: %i[create new delete]
+    resources :bookmarks, only: %i[create new]
   end
+  resources :bookmarks, only: %i[destroy]
 end
